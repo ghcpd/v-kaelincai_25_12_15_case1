@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User login page with secure authentication">
+    <title>Login - Welcome</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="login-container">
+        <div class="login-card">
+            <!-- Logo Section -->
+            <div class="logo-container">
+                <img src="assets/logo.svg" alt="Company Logo" class="logo">
+            </div>
+
+            <!-- Title -->
+            <h1 class="login-title">Welcome Back</h1>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="login-form" novalidate>
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="Enter your email"
+                        required
+                        autocomplete="email"
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <!-- Password Input (ISSUE: No show/hide toggle) -->
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-input" 
+                        placeholder="Enter your password"
+                        required
+                        autocomplete="current-password"
+                    >
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <!-- Submit Button (ISSUE: Can be clicked multiple times) -->
+                <button type="submit" class="btn-login" id="loginButton">
+                    Login
+                </button>
+
+                <!-- General Error Message -->
+                <div class="form-error hidden" id="formError"></div>
+            </form>
+
+            <!-- Register Link -->
+            <p class="register-link">
+                Don't have an account? <a href="#">Sign Up</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

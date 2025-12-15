@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Background Circle -->
+  <circle cx="30" cy="30" r="26" fill="#4A90E2" opacity="0.1"/>
+  
+  <!-- Lock Icon -->
+  <g transform="translate(30, 30)">
+    <!-- Lock Body -->
+    <rect x="-8" y="2" width="16" height="14" rx="2" fill="#4A90E2"/>
+    
+    <!-- Lock Shackle -->
+    <path d="M -6 2 L -6 -4 A 6 6 0 0 1 6 -4 L 6 2" 
+          fill="none" 
+          stroke="#4A90E2" 
+          stroke-width="3" 
+          stroke-linecap="round"/>
+    
+    <!-- Keyhole -->
+    <circle cx="0" cy="8" r="2" fill="#ffffff"/>
+    <rect x="-1" y="9" width="2" height="4" rx="1" fill="#ffffff"/>
+  </g>
+  
+  <!-- Company Name -->
+  <text x="65" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#333333">
+    SecureAuth
+  </text>
+</svg>
