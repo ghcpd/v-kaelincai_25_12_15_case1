@@ -1,0 +1,41 @@
+/* Basic layout */
+:root{
+  --primary: #4A90E2;
+  --hover: #357ABD;
+  --disabled: #CCCCCC;
+  --icon: #999999;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;background:#f5f7fb;color:#222;margin:0;}
+.container{max-width:400px;margin:8vh auto;padding:24px;background:#fff;border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,0.06)}
+h1{margin:0 0 16px;font-size:1.5rem}
+.login-form label{display:block;margin:12px 0 4px;font-size:0.9rem}
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="text"]{width:100%;padding:12px 14px;border:1px solid #e6e9ef;border-radius:6px;font-size:1rem}
+
+/* Password wrapper */
+.password-wrapper{position:relative}
+.password-wrapper input{padding-right:64px;transition:box-shadow .3s, border-color .3s}
+.password-toggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:8px;border:none;background:transparent;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;color:var(--icon);transition:color .3s, background-color .3s, transform .15s}
+.password-toggle:hover{color:var(--primary);background-color:rgba(74,144,226,0.06)}
+.password-toggle:active{transform:translateY(-50%) scale(.98)}
+.password-toggle svg{display:block}
+
+/* Button */
+.btn-login{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;margin-top:18px;border-radius:6px;border:none;background:var(--primary);color:white;font-weight:600;font-size:1rem;cursor:pointer;transition:background-color .3s}
+.btn-login:hover{background:var(--hover)}
+.btn-login:disabled{background:var(--disabled);cursor:not-allowed}
+.btn-text{display:inline-block}
+
+/* Spinner */
+.loading-spinner{width:16px;height:16px;border-radius:50%;border:2px solid rgba(0,0,0,0.08);border-top-color:var(--primary);display:inline-block;animation:spinner-rotate .6s linear infinite;vertical-align:middle}
+.loading-spinner[hidden]{display:none}
+@keyframes spinner-rotate{100%{transform:rotate(360deg)}}
+
+/* Accessibility focus */
+.password-toggle:focus{outline:2px solid rgba(74,144,226,0.2);outline-offset:2px}
+.btn-login:focus{outline:2px solid rgba(74,144,226,0.25);outline-offset:2px}
+
+/* Responsive */
+@media (max-width:420px){.container{margin:6vh 12px;padding:18px}}
