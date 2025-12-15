@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="login-card">
+      <h1 class="title">Welcome Back</h1>
+      <form id="login-form" class="login-form" novalidate>
+        <label class="field">
+          <span class="label-text">Email</span>
+          <input id="email" name="email" type="email" required autocomplete="username" placeholder="you@example.com" />
+        </label>
+
+        <label class="field">
+          <span class="label-text">Password</span>
+          <div class="password-wrapper">
+            <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Enter your password" />
+            <button type="button" class="password-toggle" aria-label="Show password" aria-pressed="false">
+              <!-- Eye open SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+        </label>
+
+        <button class="btn-login" type="submit">
+          <span class="btn-text">Login</span>
+          <span class="loading-spinner" aria-hidden="true"></span>
+        </button>
+      </form>
+
+      <p class="note">Use an email containing "success" to simulate a successful login.</p>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
