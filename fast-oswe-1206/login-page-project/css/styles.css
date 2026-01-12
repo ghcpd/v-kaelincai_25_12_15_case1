@@ -1,0 +1,133 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  width: 100%;
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4A90E2;
+}
+
+/* Password wrapper */
+.password-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.password-toggle:hover {
+  color: #4A90E2;
+}
+
+.password-toggle svg {
+  pointer-events: none;
+}
+
+/* Button styles */
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background: #357ABD;
+}
+
+.btn:disabled {
+  background: #CCCCCC;
+  cursor: not-allowed;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spinner-rotate 0.6s linear infinite;
+}
+
+@keyframes spinner-rotate {
+  to { transform: rotate(360deg); }
+}

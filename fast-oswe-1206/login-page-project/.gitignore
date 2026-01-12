@@ -1,0 +1,14 @@
+# Git ignore
+
+# Node
+node_modules/
+
+# Mac, Linux
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Windows
+Thumbs.db
